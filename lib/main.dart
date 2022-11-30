@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:netflix/core/colors/colors.dart';
+import 'package:netflix/presentation/main_page/screen_main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,43 +13,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+
         primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+        backgroundColor: Colors.black,
+        scaffoldBackgroundColor: backgroundColor,
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+        fontFamily: GoogleFonts.montserrat().fontFamily,
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        textTheme: const TextTheme(
+          bodyText1: TextStyle(color: qWhite),
+          bodyText2: TextStyle(color: qWhite),
         ),
+
       ),
+      home: ScreenMainPage(),
     );
   }
 }
