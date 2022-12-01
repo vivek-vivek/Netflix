@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/colors/colors.dart';
 import '../../../core/constants.dart';
 import '../../home/widgets/custom_home_screen_btn.dart';
+import 'video_screen_widget.dart';
 
 class ComingSoon extends StatelessWidget {
   const ComingSoon({
@@ -41,34 +41,8 @@ class ComingSoon extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: size.width * 0.4,
-                    child: Image(
-                      image: NetworkImage(imageUrl),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Positioned(
-                    right: 10,
-                    bottom: 0,
-                    child: CircleAvatar(
-                      radius: 20,
-                      backgroundColor: Colors.black.withOpacity(0.5),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.volume_off,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // video player widget
+              VideoPlyingScreenWidget(size: size, imageUrl: imageUrl),
               Row(
                 children: [
                   Padding(

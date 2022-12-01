@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/presentation/home/widgets/custom_home_screen_btn.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/coming_soon_widget.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/everyone_watching.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/video_screen_widget.dart';
 
 import '../../core/colors/colors.dart';
 import '../../core/constants.dart';
@@ -45,7 +47,7 @@ class ScreenNewAndHot extends StatelessWidget {
         body: TabBarView(
           children: [
             _buildComingSoon(context),
-            _buildEveryOnesWatching(),
+            _buildEveryOnesWatching(context),
           ],
         ),
       ),
@@ -55,12 +57,16 @@ class ScreenNewAndHot extends StatelessWidget {
 
 Widget _buildComingSoon(BuildContext context) {
   return ListView.builder(
+    itemCount: 10,
     itemBuilder: (context, index) {
       return const ComingSoon(imageUrl: duneMovie);
     },
   );
 }
 
-Widget _buildEveryOnesWatching() {
-  return const Text("ev");
+Widget _buildEveryOnesWatching(BuildContext context) {
+  return ListView.builder(
+    itemCount: 10,
+    itemBuilder: (context, index) => const EveryOnesWatching(),
+  );
 }
