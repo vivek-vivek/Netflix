@@ -4,10 +4,14 @@ import '../../../core/colors/colors.dart';
 class CustomsHomeScreenButton extends StatelessWidget {
   final IconData data;
   final String tittle;
+  final double textSize;
+  final double iconSize;
   const CustomsHomeScreenButton({
     Key? key,
     required this.data,
     required this.tittle,
+    this.textSize = 18,
+    this.iconSize = 30,
   }) : super(key: key);
 
   @override
@@ -18,14 +22,15 @@ class CustomsHomeScreenButton extends StatelessWidget {
           onPressed: () {},
           icon: Icon(
             data,
-            size: 30,
+            size: iconSize,
             color: qWhite,
           ),
         ),
         Text(
           tittle,
-          style: const TextStyle(
-            fontSize: 18,
+          style: TextStyle(
+            letterSpacing: 1,
+            fontSize: textSize,
           ),
         )
       ],

@@ -11,6 +11,8 @@ const kHeight5 = SizedBox(height: 5);
 const String newImageUrl =
     "https://w0.peakpx.com/wallpaper/900/295/HD-wallpaper-dune-2020-arrakis-herbert-movie-pelicula.jpg";
 
+const String duneMovie =
+    "https://i.gadgets360cdn.com/large/dune_movie_review_timothee_chalamet_rebecca_ferguson_1634824785794.jpg";
 const String netflixLogoUrl =
     'https://i.pinimg.com/564x/39/37/47/393747d57d29232eaa98b9ecba7c4dca.jpg';
 
@@ -26,4 +28,4 @@ TextStyle kTittleStyle16 =
 TextStyle kDateStyle30 =
     const TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 TextStyle kTittle35 =
-    const TextStyle(fontSize: 35, fontWeight: FontWeight.bold);
+    const TextStyle(fontSize: 30, fontWeight: FontWeight.bold);

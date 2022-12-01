@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/presentation/home/widgets/custom_home_screen_btn.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/coming_soon_widget.dart';
 
 import '../../core/colors/colors.dart';
 import '../../core/constants.dart';
@@ -52,76 +54,10 @@ class ScreenNewAndHot extends StatelessWidget {
 }
 
 Widget _buildComingSoon(BuildContext context) {
-  const String imageUrl =
-      'https://wp.scoopwhoop.com/wp-content/uploads/2020/02/5e3d09e350758d4cadd50189_646d0874-4f7f-4030-8e35-df3d5a69e836.jpg';
-  Size size = MediaQuery.of(context).size;
-  return ListView(
-    children: [
-      kHeight,
-      Row(
-        children: [
-          SizedBox(
-            width: size.width * 0.15,
-            height: 400,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Text(
-                  "FEB",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: qGrey,
-                  ),
-                ),
-                Text("11", style: kDateStyle30),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 400,
-            width: size.width - (size.width * 0.17),
-            child: Column(
-              children: [
-                Stack(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      height: size.width * 0.4,
-                      child: const Image(
-                        image: NetworkImage(imageUrl),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Positioned(
-                      right: 10,
-                      bottom: 0,
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Colors.black.withOpacity(0.5),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.volume_off,
-                            color: Colors.white,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children:  [
-                    Text("Tall Girl 2",style: kTittle35,),
-                  ],
-                )
-              ],
-            ),
-          )
-        ],
-      )
-    ],
+  return ListView.builder(
+    itemBuilder: (context, index) {
+      return const ComingSoon(imageUrl: duneMovie);
+    },
   );
 }
 
