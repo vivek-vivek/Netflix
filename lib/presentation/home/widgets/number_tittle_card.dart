@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/core/constants.dart';
 import '../../widgets/main_tittle.dart';
 import 'number_card.dart';
 
@@ -26,7 +27,7 @@ class NumberTittleCard extends StatelessWidget {
             children: List.generate(
               10,
               (index) => NumberCardWidget(
-                imageUrl: imageUrl,
+                imageUrl: newImageUrl,
                 index: index,
               ),
             ),

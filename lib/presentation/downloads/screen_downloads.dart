@@ -17,7 +17,9 @@ class ScreenDownloads extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),
-          child: AppBarWidget(),
+          child: AppBarWidget(
+            tittle: "Downloads",
+          ),
         ),
         body: ListView.separated(
           padding: const EdgeInsets.all(10),
@@ -89,7 +91,7 @@ class Section2 extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Padding(
-                padding:const  EdgeInsets.only(bottom: 40),
+                padding: const EdgeInsets.only(bottom: 40),
                 child: CircleAvatar(
                   backgroundColor: Colors.grey.withOpacity(0.5),
                   radius: size.width * 0.60,
@@ -130,7 +132,7 @@ class Section3 extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding:  EdgeInsets.only(top: size.width*0.06),
+          padding: EdgeInsets.only(top: size.width * 0.06),
           child: SizedBox(
             width: double.infinity,
             child: MaterialButton(

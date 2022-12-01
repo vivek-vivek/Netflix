@@ -6,3 +6,4 @@ const qWhite             = Colors.white;
 const qBlue              = Colors.blue;
 const qBlack             = Colors.black;
 final qBtnColor          = Colors.blueAccent[700];
+const qRed               = Colors.red;
