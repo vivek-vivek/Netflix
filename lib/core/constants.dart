@@ -25,6 +25,13 @@ const String duneMovie =
 const String netflixLogoUrl =
     'https://i.pinimg.com/564x/39/37/47/393747d57d29232eaa98b9ecba7c4dca.jpg';
 
+
+
+
+// og image from api
+const imageAppendUrl="https://image.tmdb.org/t/p/w500";
+
+
 // Radius
 BorderRadius kBorderRadius10 = BorderRadius.circular(10);
 BorderRadius kBorderRadius30 = BorderRadius.circular(30);
